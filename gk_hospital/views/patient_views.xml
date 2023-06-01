@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="gk_hospital_patient_view_form" model="ir.ui.view">
+        <field name="name">gk.hospital.patient.form</field>
+        <field name="model">gk.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="observing_doctor"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="gk_hospital_patient_view_tree" model="ir.ui.view">
+        <field name="name">gk.hospital.patient.tree</field>
+        <field name="model">gk.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="observing_doctor"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_gk_hospital_patient" model="ir.actions.act_window">
+        <field name="name">Patient</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gk.patient</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem id="gk_hospital_menu_patient"
+              action="action_gk_hospital_patient"
+              name="Patients"
+              parent="gk_hospital_catalog_main_menu"
+              sequence="10"/>
+
+</odoo>

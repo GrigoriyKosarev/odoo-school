@@ -1,6 +1,4 @@
-import logging
-
-from odoo import models, fields, api
+from odoo import models, fields
 
 
 class Doctor(models.Model):
@@ -9,5 +7,4 @@ class Doctor(models.Model):
 
     name = fields.Char()
     active = fields.Boolean(
-        default=True, )
-
+        default=True)

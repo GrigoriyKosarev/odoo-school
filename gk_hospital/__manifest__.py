@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "gk_hospital",
 
@@ -6,12 +5,7 @@
         Odoo-school. Module 'Hospital'
         """,
 
-    'description': """
-        Odoo-school. Module 'Hospital'
-        """,
-
     'author':  "grigoriykosarev@gmail.com",
-    'website': "grigoriykosarev@gmail.com",
 
     'category': 'Customizations',
     'version': '15.0.1.0.0',
@@ -21,8 +15,11 @@
 
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/hospital_menu.xml',
+        'views/disease_views.xml',
+        'views/doctor_views.xml',
+        'views/patient_views.xml',
+        'views/patient_visit_views.xml',
     ],
 
     'installable': True,

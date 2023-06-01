@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="gk_hospital_patient_visit_view_form" model="ir.ui.view">
+        <field name="name">gk.hospital.patient.visit.form</field>
+        <field name="model">gk.patient.visit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="gk_hospital_patient_visit_view_tree" model="ir.ui.view">
+        <field name="name">gk.hospital.patient.visit.tree</field>
+        <field name="model">gk.patient.visit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_gk_hospital_patient_visit" model="ir.actions.act_window">
+        <field name="name">Patient visit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gk.patient.visit</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem id="gk_hospital_menu_patient_visit"
+              action="action_gk_hospital_patient_visit"
+              name="Patient visits"
+              parent="gk_hospital_settings_main_menu"
+              sequence="30"/>
+
+</odoo>

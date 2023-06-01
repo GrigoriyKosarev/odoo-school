@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="gk_hospital_main_menu"
+              name="Hospital" sequence="1"/>
+
+    <menuitem id="gk_hospital_catalog_main_menu"
+              parent="gk_hospital_main_menu"
+              name="Catalog" sequence="100"/>
+
+    <menuitem id="gk_hospital_settings_main_menu"
+              parent="gk_hospital_main_menu"
+              name="Settings" sequence="200"/>
+
+</odoo>

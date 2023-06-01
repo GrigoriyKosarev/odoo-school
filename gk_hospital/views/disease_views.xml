@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="gk_hospital_disease_view_form" model="ir.ui.view">
+        <field name="name">gk.hospital.disease.form</field>
+        <field name="model">gk.disease</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="gk_hospital_disease_view_tree" model="ir.ui.view">
+        <field name="name">gk.hospital.disease.tree</field>
+        <field name="model">gk.disease</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_gk_hospital_disease" model="ir.actions.act_window">
+        <field name="name">Disease</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gk.disease</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem id="gk_hospital_menu_disease"
+              action="action_gk_hospital_disease"
+              name="Diseases"
+              parent="gk_hospital_settings_main_menu"
+              sequence="20"/>
+
+</odoo>
