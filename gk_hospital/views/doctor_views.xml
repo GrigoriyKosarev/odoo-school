@@ -8,7 +8,7 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="full_name"/>
                     </group>
                 </sheet>
             </form>
@@ -20,7 +20,7 @@
         <field name="model">gk.doctor</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="full_name"/>
             </tree>
         </field>
     </record>
