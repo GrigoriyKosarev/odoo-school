@@ -8,3 +8,4 @@ class Doctor(models.Model):
 
     active = fields.Boolean(
         default=True)
+    specialty = fields.Char(string='Specialty')

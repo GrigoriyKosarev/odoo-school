@@ -13,15 +13,20 @@ class Patient(models.Model):
     observing_doctor = fields.Many2one(
         comodel_name='gk.doctor')
     birthday = fields.Date(string='Birthday')
-    years = fields.Integer(string='Years', compute='_compute_years')
-
+    age = fields.Integer(string='Years', compute='_compute_age')
+    passport = fields.Char(string='Passport')
+    contact_person = fields.Many2one(comodel_name='gk.contact.person', string='Contact person')
+    personal_doctor = fields.Many2one(comodel_name='gk.doctor', string='Personal doctor')
 
     @api.depends('birthday')
-    def _compute_years(self):
-        for patient in self:
-            if patient.birthday:
-                birthday_date = patient.birthday
-                full_age = relativedelta(datetime.today() - datetime.combine(birthday_date, time()))
-                patient.years = full_age.years
-            else:
-                patient.years = 0
+    def _compute_age(self):
+        self.ensure_one()
+        if self.birthday:
+            current_date = datetime.now()
+            self.age = current_date.year - self.birthday.year
+
+            if current_date.month < self.birthday.month or (
+                    current_date.month == self.birthday.month and current_date.day < self.birthday.day):
+                self.age -= 1
+        else:
+            self.age = 0
