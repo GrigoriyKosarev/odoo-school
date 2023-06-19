@@ -26,5 +26,6 @@
     'auto_install': False,
 
     'demo': [
+        'data/disease_demo.xml',
     ],
 }

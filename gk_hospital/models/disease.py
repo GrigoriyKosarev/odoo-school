@@ -6,3 +6,5 @@ class Disease(models.Model):
     _description = 'Disease'
 
     name = fields.Char()
+    active = fields.Boolean(
+        default=True)
