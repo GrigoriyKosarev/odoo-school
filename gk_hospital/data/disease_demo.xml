@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="0">
-	<record id="gk_hospital_gk_disease_demo_pediatrician" model="gk.disease" forcecreate="True">
-		<field name="name">Pediatrician</field>
-		<field name="active" eval="True"/>
-	</record>
-	<record id="gk_hospital_gk_disease_demo_cardiologist" model="gk.disease" forcecreate="True">
-		<field name="name">Cardiologist</field>
-		<field name="active" eval="True"/>
-	</record>
-	<record id="gk_hospital_gk_disease_demo_dermatologist " model="gk.disease" forcecreate="True">
-		<field name="name">Dermatologist</field>
-		<field name="active" eval="True"/>
-	</record>
-	<record id="gk_hospital_gk_disease_demo_neurologist" model="gk.disease" forcecreate="True">
-		<field name="name">Neurologist</field>
-		<field name="active" eval="True"/>
-	</record>
+<odoo>
+	<data>
+		<record id="gk_hospital.gk_disease_demo_pediatrician" model="gk.disease" forcecreate="True">
+			<field name="name">Pediatrician</field>
+		</record>
+		<record id="gk_hospital.gk_disease_demo_cardiologist" model="gk.disease" forcecreate="True">
+			<field name="name">Cardiologist</field>
+		</record>
+		<record id="gk_hospital.gk_disease_demo_dermatologist" model="gk.disease" forcecreate="True">
+			<field name="name">Dermatologist</field>
+		</record>
+		<record id="gk_hospital.gk_disease_demo_neurologist" model="gk.disease" forcecreate="True">
+			<field name="name">Neurologist</field>
+		</record>
+	</data>
 </odoo>
